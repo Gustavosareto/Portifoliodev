@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo | Desenvolvedor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">GUSTAVO<span>.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato" class="btn-nav">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section hidden">
+        <div class="hero-content">
+            <p class="greeting">Olá, eu sou o Gustavo 👋</p>
+            <h1>Trasnformando ideias em <span class="gradient-text">experiências digitais</span></h1>
+            <p class="hero-description">Desenvolvedor focado em criar aplicações web modernas, responsivas e incríveis.
+            </p>
+            <div class="hero-cta">
+                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="glass-card profile-card">
+                <img src="assets/gustavo.png" alt="Gustavo" class="profile-pic">
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="about section hidden">
+        <div class="section-header">
+            <h2>Sobre <span class="gradient-text">Mim</span></h2>
+            <div class="line"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text glass-panel">
+                <p>Sou um desenvolvedor apaixonado por tecnologia e focado em criar produtos digitais que geram impacto
+                    real. Costumo unir design, performance e uma base de código sólida para entregar as melhores
+                    soluções.</p>
+                <p>Estou sempre aprendendo novas tecnologias e me aprimorando. Gosto de resolver problemas complexos com
+                    soluções simples e elegantes.</p>
+
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projects section hidden">
+        <div class="section-header">
+            <h2>Meus <span class="gradient-text">Projetos</span></h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Projeto 1 -->
+            <div class="project-card glass-panel" style="--animation-order: 1">
+                <div class="project-img">
+                    <img src="assets/ecommerce.png" alt="Projeto 1">
+                    <div class="project-overlay">
+                        <a href="https://beatriz-lacos.vercel.app/" class="btn btn-primary btn-sm"><i
+                                data-lucide="external-link"></i> Demo</a>
+                        <a href="https://github.com/Gustavosareto/ecommerce" class="btn btn-secondary btn-sm"><i
+                                data-lucide="github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Plataforma E-commerce</h3>
+                    <p>Uma aplicação completa para vendas online com carrinho de compras, integração de pagamentos e
+                        painel administrativo.</p>
+                    <div class="tech-stack">
+                        <span>Html</span>
+                        <span>Css</span>
+                        <span>JavaScript</span>
+                        <span>Supabase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project-card glass-panel" style="--animation-order: 2">
+                <div class="project-img">
+                    <img src="assets/pe-de-cafe.png" alt="Projeto 2">
+                    <div class="project-overlay">
+                        <a href="https://pe-de-cafe-nu.vercel.app/" class="btn btn-primary btn-sm"><i
+                                data-lucide="external-link"></i> Demo</a>
+                        <a href="https://github.com/Gustavosareto/Pe-de-Cafe" class="btn btn-secondary btn-sm"><i
+                                data-lucide="github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Cafeteria</h3>
+                    <p>Uma cafeteria com um design moderno e elegante, com um sistema de pedidos e pagamentos.</p>
+                    <div class="tech-stack">
+                        <span>Html</span>
+                        <span>Css</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="project-card glass-panel" style="--animation-order: 3">
+                <div class="project-img">
+                    <img src="assets/rapanui.png" alt="Projeto 3">
+                    <div class="project-overlay">
+                        <a href="https://rapanui-coral.vercel.app/" class="btn btn-primary btn-sm"><i
+                                data-lucide="external-link"></i> Demo</a>
+                        <a href="https://github.com/Gustavosareto/rapanui" class="btn btn-secondary btn-sm"><i
+                                data-lucide="github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Hamburgueria</h3>
+                    <p>Hamburgueria elegante e moderna, para surpreender seus clientes</p>
+                    <div class="tech-stack">
+                        <span>Html</span>
+                        <span>TypeScript</span>
+                        <span>Css</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 4 -->
+            <div class="project-card glass-panel" style="--animation-order: 4">
+                <div class="project-img">
+                    <img src="assets/autoelite.png" alt="Projeto 4">
+                    <div class="project-overlay">
+                        <a href="https://autoelite-nu.vercel.app/" class="btn btn-primary btn-sm"><i
+                                data-lucide="external-link"></i> Demo</a>
+                        <a href="https://github.com/Gustavosareto/AutoElite" class="btn btn-secondary btn-sm"><i
+                                data-lucide="github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Loja de carros importados</h3>
+                    <p>Loja de carros importados com um design moderno, com animações e interatividade</p>
+                    <div class="tech-stack">
+                        <span>Html</span>
+                        <span>Css</span>
+                        <span>React</span>
+                        <span>Supabase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gustavo. Construído com <span style="color: #ef4444;">❤</span> usando HTML, CSS e JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

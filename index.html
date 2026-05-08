@@ -1,189 +1,309 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo | Desenvolvedor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal web developer portfolio with projects, skills, experience and contact.">
+  <title>Seu Nome Completo | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Fira+Code:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="blob-bg"></div>
-    <div class="blob-bg blob-2"></div>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-text">
+       <span class="preloader-line">Welcome</span>
+        <span class="preloader-line">my Portfolio</span>
+       <span class="preloader-line">Dev</span>
+    </div>
+  </div>
 
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo">GUSTAVO<span>.DEV</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato" class="btn-nav">Contato</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <header class="navbar" aria-label="Main navigation">
+    <a class="nav-logo" href="#hero" aria-label="Go to start">GS</a>
+    <div class="nav-meta">
+      <span data-i18n="location">Balneario Camboriu, Brazil</span>
+      <a href="mailto:gustavosareto1@gmail.com">gustavosareto1@gmail.com</a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#work" data-i18n="nav.work">Work</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
     </nav>
+    <div class="lang-switcher" aria-label="Language selector">
+      <button class="lang-button is-active" type="button" data-lang="en">EN</button>
+      <button class="lang-button" type="button" data-lang="pt">PT</button>
+      <button class="lang-button" type="button" data-lang="es">ES</button>
+    </div>
+  </header>
 
-    <header id="home" class="hero section hidden">
-        <div class="hero-content">
-            <p class="greeting">Olá, eu sou o Gustavo 👋</p>
-            <h1>Trasnformando ideias em <span class="gradient-text">experiências digitais</span></h1>
-            <p class="hero-description">Desenvolvedor focado em criar aplicações web modernas, responsivas e incríveis.
-            </p>
-            <div class="hero-cta">
-                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-                <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
-            </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div>
+          <h1 class="hero-title" id="hero-title" data-split-text>
+            <span class="hero-line">Gustavo</span>
+            <span class="hero-line">Sareto</span>
+          </h1>
+          <p class="hero-tagline" data-i18n="hero.tagline">2+ years of crafting innovative web projects</p>
+          <div class="hero-actions">
+            <a href="assets/Gustavo_Sareto_CV.pdf" download class="btn-download" data-i18n="hero.download">Download CV</a>
+          </div>
         </div>
-        <div class="hero-image">
-            <div class="glass-card profile-card">
-                <img src="assets/gustavo.png" alt="Gustavo" class="profile-pic">
-            </div>
-        </div>
-    </header>
-
-    <section id="sobre" class="about section hidden">
-        <div class="section-header">
-            <h2>Sobre <span class="gradient-text">Mim</span></h2>
-            <div class="line"></div>
-        </div>
-        <div class="about-content">
-            <div class="about-text glass-panel">
-                <p>Sou um desenvolvedor apaixonado por tecnologia e focado em criar produtos digitais que geram impacto
-                    real. Costumo unir design, performance e uma base de código sólida para entregar as melhores
-                    soluções.</p>
-                <p>Estou sempre aprendendo novas tecnologias e me aprimorando. Gosto de resolver problemas complexos com
-                    soluções simples e elegantes.</p>
-
-                <div class="skills">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">SQL</span>
-                </div>
-            </div>
-        </div>
+      </div>
+      <span class="scroll-hint">Scroll</span>
     </section>
 
-    <section id="projetos" class="projects section hidden">
-        <div class="section-header">
-            <h2>Meus <span class="gradient-text">Projetos</span></h2>
-            <div class="line"></div>
+    <!-- About -->
+    <section class="section about reveal-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-title">
+          <span class="section-kicker" data-i18n="about.kicker">About</span>
+          <h2 id="about-title" data-i18n-html="about.title">Turning vision into <em>interactive</em>, dynamic and scalable websites.</h2>
+          
+          <!-- VS Code Panel (Live Typing) -->
+          <div class="code-wrapper">
+            <div class="code-topbar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">script.js</span>
+            </div>
+            <div class="code-body">
+              <div class="line-numbers" id="line-numbers">1</div>
+              <pre class="code-display"><code id="code-output"></code><span class="code-cursor">?</span></pre>
+            </div>
+          </div>
         </div>
-
-        <div class="projects-grid">
-            <!-- Projeto 1 -->
-            <div class="project-card glass-panel" style="--animation-order: 1">
-                <div class="project-img">
-                    <img src="assets/ecommerce.png" alt="Projeto 1">
-                    <div class="project-overlay">
-                        <a href="https://beatriz-lacos.vercel.app/" class="btn btn-primary btn-sm"><i
-                                data-lucide="external-link"></i> Demo</a>
-                        <a href="https://github.com/Gustavosareto/ecommerce" class="btn btn-secondary btn-sm"><i
-                                data-lucide="github"></i> GitHub</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Plataforma E-commerce</h3>
-                    <p>Uma aplicação completa para vendas online com carrinho de compras, integração de pagamentos e
-                        painel administrativo.</p>
-                    <div class="tech-stack">
-                        <span>Html</span>
-                        <span>Css</span>
-                        <span>JavaScript</span>
-                        <span>Supabase</span>
-                    </div>
-                </div>
+        <div class="about-copy">
+          <p data-i18n="about.p1">I am a full-stack web developer focused on modern interfaces, front-end architecture, and robust integrations. I work on digital products that require a good user experience, performance, and a technical foundation that is easy to evolve.</p>
+          <p data-i18n="about.p2">I build landing pages, dashboards, e-commerce sites, and applications with carefully crafted animations, responsive design, and accessibility best practices.</p>
+          <p data-i18n="about.p3">I also develop custom CMS solutions and administrative workflows to enable teams to publish, measure, and operate their projects with autonomy.</p>
+          <div class="about-stats" aria-label="Professional statistics">
+            <div class="stat-item">
+              <strong class="counter">2+</strong>
+              <span data-i18n="stats.years">Years of experience</span>
             </div>
-
-            <!-- Projeto 2 -->
-            <div class="project-card glass-panel" style="--animation-order: 2">
-                <div class="project-img">
-                    <img src="assets/pe-de-cafe.png" alt="Projeto 2">
-                    <div class="project-overlay">
-                        <a href="https://pe-de-cafe-nu.vercel.app/" class="btn btn-primary btn-sm"><i
-                                data-lucide="external-link"></i> Demo</a>
-                        <a href="https://github.com/Gustavosareto/Pe-de-Cafe" class="btn btn-secondary btn-sm"><i
-                                data-lucide="github"></i> GitHub</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Cafeteria</h3>
-                    <p>Uma cafeteria com um design moderno e elegante, com um sistema de pedidos e pagamentos.</p>
-                    <div class="tech-stack">
-                        <span>Html</span>
-                        <span>Css</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
+            <div class="stat-item">
+              <strong>24</strong>
+              <span data-i18n="stats.projects">Projects delivered for product, marketing and operations</span>
             </div>
-
-            <!-- Projeto 3 -->
-            <div class="project-card glass-panel" style="--animation-order: 3">
-                <div class="project-img">
-                    <img src="assets/rapanui.png" alt="Projeto 3">
-                    <div class="project-overlay">
-                        <a href="https://rapanui-coral.vercel.app/" class="btn btn-primary btn-sm"><i
-                                data-lucide="external-link"></i> Demo</a>
-                        <a href="https://github.com/Gustavosareto/rapanui" class="btn btn-secondary btn-sm"><i
-                                data-lucide="github"></i> GitHub</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Hamburgueria</h3>
-                    <p>Hamburgueria elegante e moderna, para surpreender seus clientes</p>
-                    <div class="tech-stack">
-                        <span>Html</span>
-                        <span>TypeScript</span>
-                        <span>Css</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projeto 4 -->
-            <div class="project-card glass-panel" style="--animation-order: 4">
-                <div class="project-img">
-                    <img src="assets/autoelite.png" alt="Projeto 4">
-                    <div class="project-overlay">
-                        <a href="https://autoelite-nu.vercel.app/" class="btn btn-primary btn-sm"><i
-                                data-lucide="external-link"></i> Demo</a>
-                        <a href="https://github.com/Gustavosareto/AutoElite" class="btn btn-secondary btn-sm"><i
-                                data-lucide="github"></i> GitHub</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Loja de carros importados</h3>
-                    <p>Loja de carros importados com um design moderno, com animações e interatividade</p>
-                    <div class="tech-stack">
-                        <span>Html</span>
-                        <span>Css</span>
-                        <span>React</span>
-                        <span>Supabase</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Gustavo. Construído com <span style="color: #ef4444;">❤</span> usando HTML, CSS e JS.</p>
-    </footer>
+    <!-- Skills -->
+    <section class="section skills-section reveal-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <span class="section-kicker" data-i18n="skills.kicker">Skills</span>
+        <h2 class="section-heading" id="skills-title" data-i18n="skills.title">Main stack</h2>
+        <div class="skills-strip" aria-label="Technology list">
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/react/f5f5f0" width="16" height="16" loading="lazy" alt="">React JS</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/nextdotjs/f5f5f0" width="16" height="16" loading="lazy" alt="">Next.js</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/typescript/f5f5f0" width="16" height="16" loading="lazy" alt="">TypeScript</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/nodedotjs/f5f5f0" width="16" height="16" loading="lazy" alt="">Node.js</span>  
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/tailwindcss/f5f5f0" width="16" height="16" loading="lazy" alt="">Tailwind CSS</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/postgresql/f5f5f0" width="16" height="16" loading="lazy" alt="">PostgreSQL</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/greensock/f5f5f0" width="16" height="16" loading="lazy" alt="">GSAP</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/stripe/f5f5f0" width="16" height="16" loading="lazy" alt="">Stripe</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/html5/f5f5f0" width="16" height="16" loading="lazy" alt="">HTML</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/css/f5f5f0" width="16" height="16" loading="lazy" alt="">CSS</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/javascript/f5f5f0" width="16" height="16" loading="lazy" alt="">JavaScript</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/vite/f5f5f0" width="16" height="16" loading="lazy" alt="">Vite</span>
+          <span class="skill-pill"><img src="https://cdn.simpleicons.org/vercel/f5f5f0" width="16" height="16" loading="lazy" alt="">Vercel</span>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <!-- Work -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work-stage">
+        <h2 class="featured-title" id="work-title" data-i18n="work.featured">Featured Work</h2>
+        <div class="project-wheel" aria-label="Selected projects">
+          <article class="work-card" data-project-id="burger">
+            <div class="work-thumb">
+              <img src="assets/projects/hamburgueria.png" alt="Burger project preview" loading="lazy" width="800" height="600">
+            </div>
+            <div class="work-body">
+              <h3>Burger</h3>
+              <p data-project-field="description">Web application for online ordering and inventory management.</p>
+              <div class="work-meta">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-link" href="https://hmaburgueria-vaca-louca.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="project.view">? View project</a>
+                <button class="work-more" type="button" data-i18n="project.more">Learn more</button>
+              </div>
+            </div>
+          </article>
+          <article class="work-card" data-project-id="cafe">
+            <div class="work-thumb">
+              <img src="assets/projects/pe-de-cafe.png" alt="Pe de Cafe project preview" loading="lazy" width="800" height="600">
+            </div>
+            <div class="work-body">
+              <h3>Pe de Caf�</h3>
+              <p data-project-field="description">Landing page for a coffee shop.</p>
+              <div class="work-meta">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-link" href="https://pe-de-cafe-nu.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="project.view">? View project</a>
+                <button class="work-more" type="button" data-i18n="project.more">Learn more</button>
+              </div>
+            </div>
+          </article>
+          <article class="work-card" data-project-id="commerce">
+            <div class="work-thumb">
+              <img src="assets/projects/ecommerce.png" alt="Commerce UI project preview" loading="lazy" width="800" height="600">
+            </div>
+            <div class="work-body">
+              <h3>Commerce UI</h3>
+              <p data-project-field="description">E-commerce experience with modular catalog and optimized checkout.</p>
+              <div class="work-meta">
+                <span>React</span>
+                <span>CSS</span>
+                <span>Vercel</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-link" href="https://beatriz-lacos.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="project.view">? View project</a>
+                <button class="work-more" type="button" data-i18n="project.more">Learn more</button>
+              </div>
+            </div>
+          </article>
+          <article class="work-card" data-project-id="salon">
+            <div class="work-thumb">
+              <img src="assets/projects/salao.png" alt="Salon project preview" loading="lazy" width="800" height="600">
+            </div>
+            <div class="work-body">
+              <h3>Salon</h3>
+              <p data-project-field="description">Institutional website for a beauty studio with services and contact flow.</p>
+              <div class="work-meta">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-link" href="https://deluca-studio.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="project.view">? View project</a>
+                <button class="work-more" type="button" data-i18n="project.more">Learn more</button>
+              </div>
+            </div>
+          </article>
+          <article class="work-card" data-project-id="barbershop">
+            <div class="work-thumb">
+              <img src="assets/projects/barbearia.png" alt="Barbershop project preview" loading="lazy" width="800" height="600">
+            </div>
+            <div class="work-body">
+              <h3>Barbershop</h3>
+              <p data-project-field="description">Website for a barbershop with online booking and service gallery.</p>
+              <div class="work-meta">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="work-actions">
+                <a class="work-link" href="https://morgam-s-barbearia.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="project.view">? View project</a>
+                <button class="work-more" type="button" data-i18n="project.more">Learn more</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="contact-copy-scene">
+        <p class="contact-copy" data-i18n="work.cta">Lets work together to create something awesome and beautiful. Whether you have a project in mind or just want to say hi, feel free to get in touch.</p>
+      </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal" aria-hidden="true">
+      <div class="project-modal__overlay" data-modal-close></div>
+      <section class="project-modal__panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+        <button class="project-modal__close" type="button" data-modal-close aria-label="Close project details">�</button>
+        <span class="section-kicker" data-i18n="modal.kicker">Project</span>
+        <h2 id="project-modal-title">Project</h2>
+        <dl class="project-modal__details">
+          <div>
+            <dt data-i18n="modal.purpose">What it was built for</dt>
+            <dd data-project-purpose></dd>
+          </div>
+          <div>
+            <dt data-i18n="modal.tech">Technologies used</dt>
+            <dd data-project-tech></dd>
+          </div>
+          <div>
+            <dt data-i18n="modal.role">My delivery</dt>
+            <dd data-project-role></dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <!-- Experience -->
+    <section class="section reveal-section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 class="experience-title" id="experience-title" data-i18n="experience.title">Experience</h2>
+        <div class="exp-item">
+          <div>
+            <h3 class="exp-company">Studio Digital</h3>
+            <span class="exp-date">2023 - Present</span>
+          </div>
+          <div class="exp-content">
+            <p class="exp-role">Senior Frontend Developer</p>
+            <ul>
+              <li data-i18n="experience.one.b1">Technical leadership for React and Next.js interfaces in B2B products.</li>
+              <li data-i18n="experience.one.b2">Creation of design systems with accessible and documented components.</li>
+              <li data-i18n="experience.one.b3">Performance optimization for critical pages and conversion flows.</li>
+            </ul>
+            <p class="exp-stack">Technologies: React.js, Next.js, TypeScript, Tailwind CSS, GSAP</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div>
+            <h3 class="exp-company">Tech Company</h3>
+            <span class="exp-date">2021 - 2023</span>
+          </div>
+          <div class="exp-content">
+            <p class="exp-role">Full Stack Developer</p>
+            <ul>
+              <li data-i18n="experience.two.b1">Development of REST APIs, payment integrations and admin panels.</li>
+              <li data-i18n="experience.two.b2">Implementation of tests, code review and deployment pipeline improvements.</li>
+              <li data-i18n="experience.two.b3">Collaboration with product, design and support to reduce friction in key journeys.</li>
+            </ul>
+            <p class="exp-stack">Technologies: Node.js, PostgreSQL, Prisma, Docker, JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-meta">
+        <span class="footer-label" data-i18n="location">Balneario Camboriu, Brazil</span>
+        <a href="mailto:gustavosareto1@gmail.com">gustavosareto1@gmail.com</a>
+      </div>
+      <ul class="footer-social" aria-label="Social links">
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+        <li><a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer" aria-label="Upwork">Upwork</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
 </body>
-
 </html>

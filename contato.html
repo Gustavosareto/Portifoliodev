@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Cloudflare: não reescrever os emails (o script dele travava a primeira pintura) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#f3f4f6">
+<title>Iniciar um projeto | gustavodev</title>
+<meta name="description" content="Me conte sobre o seu projeto em duas linhas. A mensagem abre pronta no meu WhatsApp e eu respondo pessoalmente.">
+<link rel="canonical" href="https://gustavodev.com/contato">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<!-- Open Graph / Twitter — o cartão que aparece quando o link é
+     colado no WhatsApp, no LinkedIn ou no X. Sem isto o link vira
+     uma linha de texto sem imagem, e link sem cartão é clicado
+     muito menos. A arte fica em assets/og-v4.jpg (1200×630; a og.jpg antiga continua para as landings de produtos/). -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gustavodev.com/contato">
+<meta property="og:site_name" content="Gustavo Dev">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Vamos construir o próximo?">
+<meta property="og:description" content="Conte o que você precisa e eu respondo com um diagnóstico honesto.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vamos construir o próximo?">
+<meta name="twitter:description" content="Conte o que você precisa e eu respondo com um diagnóstico honesto.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- fontes sem travar a primeira pintura: baixa como preload e vira
+     folha de estilo quando chega (display=swap mostra a fonte do
+     sistema até lá) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="styles.css">
+<!-- tema: aplica antes da primeira pintura para não piscar claro -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("site_theme");
+    if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    if (t === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      document.querySelector("meta[name=theme-color]").content = "#0c0d11";
+    }
+  } catch (e) {}
+})();
+</script>
+
+
+
+<!-- Dados estruturados (JSON-LD). É por aqui que o Google monta
+     resultado rico e que assistentes de IA leem quem você é e o
+     que faz, sem adivinhar pelo texto corrido. Só afirma o que
+     está escrito na página: dado estruturado que mente é
+     penalizado, não premiado. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://gustavodev.com/contato",
+  "name": "Iniciar um projeto",
+  "inLanguage": "pt-BR",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://gustavodev.com/#gustavo",
+    "name": "Gustavo Dev",
+    "url": "https://gustavodev.com/",
+    "jobTitle": "Desenvolvedor full stack",
+    "email": "mailto:gustavosareto1@gmail.com",
+    "sameAs": [
+      "https://instagram.com/gusta_sr",
+      "https://tiktok.com/@gustavodev"
+    ],
+    "knowsLanguage": [
+      "pt-BR",
+      "en"
+    ],
+    "knowsAbout": [
+      "Desenvolvimento web",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Cloudflare",
+      "Automação",
+      "Landing pages"
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner container">
+    <a class="nav-brand" href="/" aria-label="Início">
+      <span class="brand-name">Gustavo<b>dev</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <div class="nav-group"><a href="/#servicos">Serviços</a></div>
+      <div class="nav-group"><a href="/#processo">Processo</a></div>
+      <div class="nav-group"><a href="/projetos">Projetos</a></div>
+      <div class="nav-group"><a href="/#contato">Contato</a></div>
+    </nav>
+    <a class="nav-cta" href="/contato">
+      <span>Iniciar projeto</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#servicos">Serviços</a>
+    <a href="/#processo">Processo</a>
+    <a href="/projetos">Projetos</a>
+    <a href="/#contato">Contato</a>
+    <a href="/contato" class="mobile-cta">Iniciar projeto</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-compact contact-page glass-scene">
+    <canvas class="dot-field" aria-hidden="true"></canvas>
+    <div class="container contact-wrap">
+      <h1 class="contact-title">Me conta o que você<br>quer construir.</h1>
+      <p class="contact-lede">Sem formalidade, pode se expressar livremente.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="contact-field">
+          <label for="cNome">Como posso te chamar?</label>
+          <input id="cNome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required>
+        </div>
+
+        <div class="contact-field">
+          <label for="cEmail">Um email, caso não tenha interesse em se falar por WhatsApp <span class="contact-opt">(opcional)</span></label>
+          <input id="cEmail" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com">
+        </div>
+
+        <div class="contact-field">
+          <label for="cMsg">Descreva seu projeto</label>
+          <textarea id="cMsg" name="mensagem" rows="6" placeholder="O que você quer construir, pra quê, e qualquer detalhe que achar importante como prazo, referências, orçamento…" required></textarea>
+        </div>
+
+        <div class="contact-actions">
+          <button type="submit" class="btn btn-primary contact-send" id="contactSend">Abrir no WhatsApp</button>
+          <button type="button" class="btn btn-ghost contact-send" id="contactMail" hidden>Enviar por email</button>
+        </div>
+        <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span id="year">2026</span> Gustavo Dev. Todo o código, do zero.</p>
+      <p class="footer-made">Este site foi feito à mão em HTML, CSS e JS, sem frameworks.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="app.js" defer></script>
+<script src="i18n.js" defer></script>
+</body>
+<!--email_on-->
+</html>

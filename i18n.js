@@ -74,6 +74,11 @@
     "No ar": "Live",
     "Sites e sistemas que você pode abrir e usar agora, do jeito que o cliente final usa.":
       "Sites and systems you can open and use right now, just like the end customer does.",
+    "Destaques": "Featured",
+    "Sistemas completos, com área do cliente e painel de gestão.":
+      "Complete systems, with a customer area and a management dashboard.",
+    "Sistema completo de barbearia: agendamento online pelo cliente e painel do barbeiro para gerenciar horários e atendimentos":
+      "Complete barbershop system: online booking for customers and a barber dashboard to manage schedules and appointments",
     "Site de hamburgueria artesanal com cardápio e pedido":
       "Artisan burger restaurant website with menu and ordering",
     "Guincho 24h em Balneário Camboriú e região: serviços, galeria de atendimentos e chamado direto no WhatsApp":

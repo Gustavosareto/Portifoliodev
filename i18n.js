@@ -79,6 +79,8 @@
       "Complete systems, with a customer area and a management dashboard.",
     "Sistema completo de barbearia: agendamento online pelo cliente e painel do barbeiro para gerenciar horários e atendimentos":
       "Complete barbershop system: online booking for customers and a barber dashboard to manage schedules and appointments",
+    "Biblioteca de animações e componentes de UI prontos para copiar e personalizar: transições, microinterações, loaders e menus":
+      "Library of ready-to-use UI animations and components to copy and customize: transitions, micro-interactions, loaders and menus",
     "Site de hamburgueria artesanal com cardápio e pedido":
       "Artisan burger restaurant website with menu and ordering",
     "Guincho 24h em Balneário Camboriú e região: serviços, galeria de atendimentos e chamado direto no WhatsApp":

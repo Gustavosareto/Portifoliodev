@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Cloudflare: não reescrever os emails (o script dele travava a primeira pintura) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#f3f4f6">
+<title>Privacidade | gustavodev</title>
+<meta name="description" content="Quais dados este site guarda, para quê, e como pedir para apagar.">
+<link rel="canonical" href="https://gustavodev.com/privacidade">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- fontes sem travar a primeira pintura: baixa como preload e vira
+     folha de estilo quando chega (display=swap mostra a fonte do
+     sistema até lá) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="styles.css">
+<!-- tema: aplica antes da primeira pintura para não piscar claro -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("site_theme");
+    if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    if (t === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      document.querySelector("meta[name=theme-color]").content = "#0c0d11";
+    }
+  } catch (e) {}
+})();
+</script>
+
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner container">
+    <a class="nav-brand" href="index.html" aria-label="Início">
+      <span class="brand-name">Gustavo<b>dev</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <div class="nav-group"><a href="index.html#servicos">Serviços</a></div>
+      <div class="nav-group"><a href="index.html#processo">Processo</a></div>
+      <div class="nav-group"><a href="projetos.html">Projetos</a></div>
+      <div class="nav-group"><a href="index.html#contato">Contato</a></div>
+    </nav>
+    <a class="nav-cta" href="contato.html">
+      <span>Iniciar projeto</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#servicos">Serviços</a>
+    <a href="index.html#processo">Processo</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="index.html#contato">Contato</a>
+    <a href="contato.html" class="mobile-cta">Iniciar projeto</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-compact">
+    <div class="container legal">
+      <h1 class="section-title">Privacidade</h1>
+      <p class="section-sub">Atualizado em novembro de 2026. Sem letra miúda: o que este site guarda e por quê.</p>
+
+      <h2>O que fica no seu navegador</h2>
+      <p>O site usa o armazenamento local do navegador (localStorage), não cookies de terceiros, para lembrar:</p>
+      <ul>
+        <li>um identificador aleatório de visitante e de visita, que não revela quem você é;</li>
+        <li>a origem da visita (parâmetros <code>utm_</code> do link, quando existirem);</li>
+        <li>o tema escolhido (claro ou escuro), o idioma e se você já fechou o aviso de cookies.</li>
+      </ul>
+      <p>Você pode apagar tudo isso a qualquer momento limpando os dados do site no seu navegador.</p>
+
+      <h2>O que é medido</h2>
+      <p>Para entender o que funciona no site, registro de forma anônima: páginas e seções vistas, quanto da página foi rolado, cliques em links e botões, tempo na página, tipo de dispositivo e o site de onde você veio. Esses dados ficam no meu próprio servidor e não são vendidos nem repassados.</p>
+
+      <h2>O que você me envia</h2>
+      <p>No formulário de contato e na conversa do site, o que você escreve (nome, email e mensagem) é salvo enquanto você digita, para que nada se perca se a página fechar. Uso isso só para responder ao seu contato e falar sobre o seu projeto.</p>
+      <p>Se você escolher o WhatsApp, a conversa passa a seguir também a <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">política de privacidade do WhatsApp</a>.</p>
+
+      <h2>Serviços de terceiros</h2>
+      <ul>
+        <li><strong>Google Fonts</strong>: as fontes do site são carregadas dos servidores do Google.</li>
+        <li><strong>Cloudflare</strong>: hospedagem e proteção do site.</li>
+        <li><strong>Meta Pixel</strong>: quando ativo, mede visitas vindas de anúncios no Instagram e Facebook.</li>
+      </ul>
+
+      <h2>Seus direitos</h2>
+      <p>Você pode pedir para ver, corrigir ou apagar os dados que me enviou, conforme a LGPD e o GDPR. É só escrever para <a href="mailto:gustavosareto1@gmail.com">gustavosareto1@gmail.com</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span id="year">2026</span> Gustavo Dev. Todo o código, do zero.</p>
+      <p class="footer-made">Este site foi feito à mão em HTML, CSS e JS, sem frameworks.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="app.js" defer></script>
+<script src="i18n.js" defer></script>
+</body>
+<!--email_on-->
+</html>

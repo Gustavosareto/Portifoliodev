@@ -6,6 +6,39 @@
 var META_PIXEL_ID = "";
 
 /* ══════════════════════════════════════════════════════════════
+   NAVEGAÇÃO ENTRE PÁGINAS
+   - Recarregar (F5) sempre volta para o topo, na hero, mesmo com
+     #âncora na URL.
+   - Link para outra página do site: o conteúdo esmaece (.page-leave
+     no styles.css) e só então a navegação acontece. A entrada da
+     página nova é a animação page-in do CSS.
+   ══════════════════════════════════════════════════════════════ */
+(function () {
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+  if (nav && nav.type === "reload") {
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+    window.scrollTo(0, 0);
+  }
+
+  var LEAVE_MS = 220;
+  function page(p) { return p.replace(/index\.html$/, ""); }
+  document.addEventListener("click", function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a || a.target && a.target !== "_self" || a.hasAttribute("download")) return;
+    if (a.origin !== location.origin || page(a.pathname) === page(location.pathname)) return;
+    e.preventDefault();
+    document.documentElement.classList.add("page-leave");
+    setTimeout(function () { location.href = a.href; }, LEAVE_MS);
+  });
+  // voltar pelo navegador restaura a página do cache ainda esmaecida
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) document.documentElement.classList.remove("page-leave");
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════
    RASTREAMENTO PRÓPRIO — bloco independente, como o do pixel.
 
    Manda para /api/site/e (functions/api/site/) quem chegou, de
@@ -163,7 +196,7 @@ var META_PIXEL_ID = "";
     aviso.innerHTML =
       '<p>Esta página utiliza cookies para melhor experiência.</p>' +
       '<div class="cookie-actions">' +
-        '<a class="cookie-more" href="/privacidade">Saiba mais</a>' +
+        '<a class="cookie-more" href="privacidade.html">Saiba mais</a>' +
         '<button type="button" class="cookie-ok liquid-glass">Ok</button>' +
       '</div>';
     document.body.appendChild(aviso);
@@ -1548,7 +1581,7 @@ var META_PIXEL_ID = "";
           });
           var mail = document.createElement("a");
           mail.className = "chat-alt";
-          mail.href = "/contato";
+          mail.href = "contato.html";
           mail.textContent = CHAT.ui.alt;
           foot.appendChild(wa);
           foot.appendChild(mail);
@@ -1804,7 +1837,7 @@ var META_PIXEL_ID = "";
     var askBusy = false;
 
     var WA_LINK = { href: "wa", pt: "Falar comigo no WhatsApp", en: "Talk to me on WhatsApp" };
-    var START_LINK = { href: "/contato", pt: "Iniciar um projeto", en: "Start a project" };
+    var START_LINK = { href: "contato.html", pt: "Iniciar um projeto", en: "Start a project" };
 
     var ASK_RULES = [
       { k: ["oi", "ola", "bom dia", "boa tarde", "boa noite", "hello", "hi ", "hey"],

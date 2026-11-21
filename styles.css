@@ -50,9 +50,25 @@ html, body {
   overflow-x: clip;
   overscroll-behavior-x: none;
 }
+/* transição entre páginas (privacidade, contato, projetos…): o conteúdo
+   entra subindo e sai esmaecendo; o menu fica parado. A saída é
+   disparada pelo app.js (classe .page-leave). Fill "backwards" para o
+   transform não ficar preso no main depois (quebraria sticky/fixed). */
+main, .footer { animation: page-in .5s cubic-bezier(.16, 1, .3, 1) backwards; }
+@keyframes page-in { from { opacity: 0; transform: translateY(16px); } }
+html.page-leave main, html.page-leave .footer {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity .22s ease-in, transform .22s ease-in;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  /* movimento reduzido: só esmaece, sem deslizar */
+  main, .footer { animation-name: page-fade; }
+  html.page-leave main, html.page-leave .footer { transform: none; }
 }
+@keyframes page-fade { from { opacity: 0; } }
 
 body {
   margin: 0;
@@ -3146,3 +3162,10 @@ html.intro .intro-sig { opacity: 1; visibility: visible; transition: none; }
 /* troca de tema: o app.js anima o círculo; aqui só desliga o crossfade padrão */
 ::view-transition-old(root),
 ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+/* página de privacidade */
+.legal { max-width: 720px; }
+.legal h2 { font-size: 22px; margin: 40px 0 12px; }
+.legal p, .legal li { color: var(--text-soft); line-height: 1.7; }
+.legal ul { padding-left: 20px; }
+.legal a { color: var(--brand); }
